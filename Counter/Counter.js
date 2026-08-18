@@ -9,6 +9,8 @@ let count = savedCount ? parseInt(savedCount) : 0
 score.value = count
 
 // functions
+
+// updates the scores on the display
 function updateDisplay() {
     if (count > 0) score.style.color = 'green'
     if (count < 0) score.style.color = 'red'
@@ -22,7 +24,7 @@ function flashBtn(button, color) {
     setTimeout(() => { button.style.backgroundColor = '' }, 200)
 }
 
-// change in score
+// change in score 
 options.addEventListener('click', (event) => {
     if (event.target.classList.contains('plus')) {
         count += 1
