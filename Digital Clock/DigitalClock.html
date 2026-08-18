@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital CLock</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(34, 33, 33);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .clock {
+            height: 200px;
+            width: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid black;
+            border-radius: 15px;
+            font-size: 140px;
+            gap: 5px;
+            color: white;
+        }
+
+        .hour,
+        .minute,
+        .second {
+            height: 100%;
+            width: 160px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backface-visibility: hidden;
+        }
+
+        .flip{
+            animation: flipNumbers infinite 0.5s linear;
+        }
+
+        @keyframes flipNumbers {
+            to{
+                transform: rotateX(360deg);
+            }
+        }
+
+        span {
+            margin-bottom: 30px;
+        }
+
+        .am-pm {
+            margin-left: 25px;
+            display: none;
+        }
+
+        .toggle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            gap: 40px;
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            width: 150px;
+            font-size: 20px;
+            font-weight: 900;
+            border: 5px solid black;
+            border-radius: 100px;
+            background-color: grey;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clock">
+        <div class="hour">12</div>
+        <span>:</span>
+        <div class="minute">05</div>
+        <span>:</span>
+        <div class="second">36</div>
+        <div class="am-pm"></div>
+    </div>
+    <div class="toggle">
+        <button class="Twelve">12 Hours</button>
+        <button class="TwentyFour">24 Hours</button>
+    </div>
+    <script src="DigitalClock.js"></script>
+</body>
+
+</html>
