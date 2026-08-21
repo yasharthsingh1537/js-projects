@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'MarsAttack';
+    src: url('Assets/MarsAttack.ttf') format('truetype');
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: MarsAttack;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(to bottom, #FF94B2, #F24455, #E5203A, #660F24);
+}
+
+
+.calc {
+    height: max(70vh, 700px);
+    width: max(40vh, 400px);
+    margin: auto;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(4, minmax(30px, 1fr));
+    grid-template-rows: repeat(6, minmax(30px, 1fr));
+    background: linear-gradient(to top, #FF94B2, #F24455, #E5203A, #660F24);
+    border-radius: 10px;
+    border: 2px solid rgb(241, 66, 66);
+}
+
+.btn {
+    user-select: none;
+    cursor: pointer;
+}
+
+.button {
+    background-color: #FF94B2;
+    height: max(50%, 70px);
+    width: max(50%, 70px);
+    border-radius: 50% 50%;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6px;
+    border: 2px solid #E5203A;
+}
+
+.multiply {
+    padding-bottom: 5px;
+}
+
+.minus {
+    padding-top: 12px;
+    padding-left: 2px;
+    font-size: 2.5em;
+}
+
+.add {
+    padding-top: 12px;
+    padding-left: 1px;
+    font-size: 2.5em;
+}
+
+.display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/span 4;
+    height: 80px;
+    width: 90%;
+    border-radius: 10px;
+    color: black;
+    border: 2px solid #FF94B2;
+    background-color: rgb(238, 230, 230);
+    margin-top: 5px;
+    outline: none;
+    text-align: right;
+    font-weight: bold;
+    font-family: MarsAttack;
+    font-size: 60px;
+    letter-spacing: 5px;
+}
+
+.allClear {
+    grid-column: 1/span 2;
+    background-color: #FF94B2;
+    padding-top: 4px;
+    height: 55px;
+    width: 70%;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid #F24455;
+    cursor: pointer;
+}
+
+.delete {
+    background-color: #FF94B2;
+    padding-top: 4px;
+    height: 55px;
+    width: 70%;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid #F24455;
+    cursor: pointer;
+}
+
+
+.equalTo {
+    grid-column: 3/span 2;
+    background-color: #2B0013;
+    color: #FF94B2;
+    padding-top: 12px;
+    height: 55px;
+    width: 70%;
+    font-size: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid #F24455;
+    cursor: pointer;
+
+}
